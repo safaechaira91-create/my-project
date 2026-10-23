@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MyDar">
+  <defs>
+    <linearGradient id="fTopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9c74f"/>
+      <stop offset="50%" style="stop-color:#f4742b"/>
+      <stop offset="100%" style="stop-color:#e04e10"/>
+    </linearGradient>
+    <linearGradient id="fBotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7BD6C9"/>
+      <stop offset="50%" style="stop-color:#2DB4A0"/>
+      <stop offset="100%" style="stop-color:#249181"/>
+    </linearGradient>
+    <linearGradient id="fWinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbd07a"/>
+      <stop offset="100%" style="stop-color:#e87820"/>
+    </linearGradient>
+    <clipPath id="fClipTop">
+      <rect x="0" y="0" width="32" height="15"/>
+    </clipPath>
+    <clipPath id="fClipBot">
+      <rect x="0" y="15" width="32" height="17"/>
+    </clipPath>
+  </defs>
+
+  <!-- Pin top orange -->
+  <path d="M16 1 C8 1 2 7 2 14 C2 21 16 31 16 31 C16 31 30 21 30 14 C30 7 24 1 16 1 Z"
+    fill="url(#fTopGrad)" clip-path="url(#fClipTop)"/>
+  <!-- Pin bottom teal -->
+  <path d="M16 1 C8 1 2 7 2 14 C2 21 16 31 16 31 C16 31 30 21 30 14 C30 7 24 1 16 1 Z"
+    fill="url(#fBotGrad)" clip-path="url(#fClipBot)"/>
+
+  <!-- White circle -->
+  <circle cx="16" cy="13" r="8.5" fill="white" opacity="0.97"/>
+
+  <!-- Roof left -->
+  <polygon points="16,5.5 8.5,13 12,13" fill="url(#fTopGrad)"/>
+  <!-- Roof right -->
+  <polygon points="16,5.5 23.5,13 20,13" fill="#d95e0e"/>
+  <!-- Roof line -->
+  <line x1="8" y1="13" x2="24" y2="13" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- House walls -->
+  <rect x="11" y="13" width="10" height="7.5" rx="0.5" fill="white"/>
+
+  <!-- Window -->
+  <rect x="13" y="14.5" width="6" height="4.5" rx="0.5" fill="url(#fWinGrad)"/>
+  <line x1="16" y1="14.5" x2="16" y2="19" stroke="white" stroke-width="1"/>
+  <line x1="13" y1="16.8" x2="19" y2="16.8" stroke="white" stroke-width="1"/>
+</svg>

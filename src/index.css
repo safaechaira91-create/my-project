@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* Configuration des variables de thème pour Tailwind v4 */
+@theme {
+  --color-primary-green: #2b9a84;
+  --color-primary-green-dark: #217665;
+  --color-secondary-orange: #f97316;
+  --color-airbnb-dark: #222222;
+  --color-airbnb-light-gray: #717171;
+  --color-bg-gray: #f7f7f7;
+}
+
+:root {
+  --primary-green: #2b9a84;
+  --primary-green-dark: #217665;
+  --secondary-orange: #f97316;
+  --airbnb-dark: #222222;
+  --airbnb-light-gray: #717171;
+  --bg-gray: #f7f7f7;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  color: #111827;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Polices adaptées au support RTL (Arabe) */
+[dir="rtl"] body {
+  font-family: 'Alexandria', 'Cairo', 'Inter', system-ui, sans-serif;
+}
+
+html, body, #root {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Utility Classes --- */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--primary-green);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green-dark);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--primary-green-dark);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--secondary-orange);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-secondary:hover {
+  filter: brightness(0.9);
+}
+
+.input-modern {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  padding: 0.875rem 1rem;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-modern:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(43, 154, 132, 0.15);
+}
+
+.card-shadow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.25rem);
+}
+
+/* Fix pour Leaflet Maps */
+.leaflet-container {
+  z-index: 0;
+  border-radius: 1rem;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

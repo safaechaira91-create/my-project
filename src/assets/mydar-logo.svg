@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Pin top orange gradient -->
+    <linearGradient id="pinTopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd166"/>
+      <stop offset="40%" style="stop-color:#fb7a1e"/>
+      <stop offset="100%" style="stop-color:#f25c05"/>
+    </linearGradient>
+    <!-- Pin bottom teal gradient -->
+    <linearGradient id="pinBotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6ddbb8"/>
+      <stop offset="50%" style="stop-color:#3dbf9e"/>
+      <stop offset="100%" style="stop-color:#27a085"/>
+    </linearGradient>
+    <!-- Inner teal ring gradient -->
+    <linearGradient id="innerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7de0c0"/>
+      <stop offset="100%" style="stop-color:#2aaa8c"/>
+    </linearGradient>
+    <!-- Window orange gradient -->
+    <linearGradient id="winGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffc266"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <!-- Text My gradient orange -->
+    <linearGradient id="myGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4742b"/>
+      <stop offset="100%" style="stop-color:#e04e10"/>
+    </linearGradient>
+    <!-- Text Dar gradient teal -->
+    <linearGradient id="darGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3dbf9e"/>
+      <stop offset="100%" style="stop-color:#27a085"/>
+    </linearGradient>
+    <!-- Clip top half of pin -->
+    <clipPath id="clipTop">
+      <rect x="0" y="0" width="200" height="98"/>
+    </clipPath>
+    <!-- Clip bottom half of pin -->
+    <clipPath id="clipBot">
+      <rect x="0" y="98" width="200" height="120"/>
+    </clipPath>
+    <!-- Drop shadow -->
+    <filter id="dropshadow" x="-20%" y="-10%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- ===== PIN SHAPE ===== -->
+  <!-- Top half - orange -->
+  <path d="M95 8 C52 8 18 42 18 85 C18 128 95 192 95 192 C95 192 172 128 172 85 C172 42 138 8 95 8 Z"
+    fill="url(#pinTopGrad)" clip-path="url(#clipTop)" filter="url(#dropshadow)"/>
+  <!-- Bottom half - teal -->
+  <path d="M95 8 C52 8 18 42 18 85 C18 128 95 192 95 192 C95 192 172 128 172 85 C172 42 138 8 95 8 Z"
+    fill="url(#pinBotGrad)" clip-path="url(#clipBot)"/>
+
+  <!-- Inner teal decorative ring (slightly smaller) -->
+  <path d="M95 18 C57 18 27 48 27 85 C27 122 95 182 95 182 C95 182 163 122 163 85 C163 48 133 18 95 18 Z"
+    fill="url(#innerRing)" opacity="0.25"/>
+
+  <!-- White circle for house -->
+  <circle cx="95" cy="82" r="50" fill="white" opacity="0.97"/>
+
+  <!-- ROOF left panel -->
+  <polygon points="95,38 47,82 71,82" fill="url(#pinTopGrad)"/>
+  <!-- ROOF right panel darker -->
+  <polygon points="95,38 143,82 119,82" fill="#d95e0e"/>
+  <!-- Roof base line white -->
+  <line x1="44" y1="82" x2="146" y2="82" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- House walls white -->
+  <rect x="63" y="82" width="64" height="44" rx="2" fill="white"/>
+
+  <!-- Window orange with grid -->
+  <rect x="77" y="91" width="36" height="28" rx="3" fill="url(#winGrad)"/>
+  <!-- Window dividers -->
+  <line x1="95" y1="91" x2="95" y2="119" stroke="white" stroke-width="2.5"/>
+  <line x1="77" y1="105" x2="113" y2="105" stroke="white" stroke-width="2.5"/>
+
+  <!-- Shadow under pin -->
+  <ellipse cx="95" cy="196" rx="24" ry="6" fill="rgba(0,0,0,0.10)"/>
+</svg>
